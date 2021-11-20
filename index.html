@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" media="screen" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://kit.fontawesome.com/d5de334049.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <------- Loading Section --------------->
+    <div class="loader_bg">
+      <div class="loader"><img src="photos/loading.gif" /></div>
+    </div>
+    <!--------- scroll To Up --------------->
+    <img src="photos/go.png" class="btnScroll" />
+    <!---------------- NavBar ---------------->
+    <header class="navBar">
+      <div class="logoDiv">
+        <h1><mark>el</mark>Captain</h1>
+      </div>
+      <div class="sections">
+        <ul>
+          <li id="homeLi">home</li>
+          <li id="aboutLi">about</li>
+          <li id="skillsLi">skills</li>
+          <li id="contactLi">contact</li>
+        </ul>
+      </div>
+      <div id="off" class="fas fa-bars"></div>
+      <div id="on" class="fas fa-times"></div>
+    </header>
+    <!--------------- Home Section ----------->
+    <section class="home">
+      <a href="index.html"><img src="photos/image1.jpg" /></a>
+      <h1 id="typed"></h1>
+      <div class="searchDiv">
+        <img src="photos/searchicon.png" class="searchIcon" />
+        <input type="search" class="search" id="search" />
+      </div>
+      <input type="submit" value="Search" />
+    </section>
+    <section class="about">
+      <img src="photos/img2.jpg" />
+      <h1 class="header">about</h1>
+      <h2 class="title">Here you can find some of an information about me</h2>
+      <div class="cardsDiv">
+        <div class="card">
+          <i class="fas fa-graduation-cap"></i>
+          <h1>my education</h1>
+          <p>
+            I'm Studying in
+            <strong style="color: #bb3d03"
+              ><br />Faculty Of Physical Education<br />Assiut
+              University</strong
+            >
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-address-card"></i>
+          <h1>Who am i</h1>
+          <ul>
+            <li>My name is <strong style="color: #bb3d03">yousef</strong></li>
+            <li>
+              My age is <strong style="color: #bb3d03">19 Years Old</strong>
+            </li>
+            <li>I'm <strong style="color: #bb3d03">Egyptian</strong></li>
+          </ul>
+        </div>
+        <div class="card">
+          <i class="fas fa-list-alt"></i>
+          <h1>my hobbies</h1>
+          <ul style="margin-left: -1rem">
+            <li><strong style="color: #bb3d03">Programming</strong></li>
+            <li><strong style="color: #bb3d03">Kong Fu</strong></li>
+            <li><strong style="color: #bb3d03">Boxing</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!---------------- Skills Section ------------------>
+    <section class="skills">
+      <h1 class="header">skills</h1>
+      <h2 class="title">Here you can see my skills</h2>
+      <div class="skillsDiv">
+        <p>HTML</p>
+        <div class="html">
+          <div class="bg">
+            <div class="htmlPercent" id="percents" data-width="90%"></div>
+          </div>
+          <div data-goal="90" class="increase"></div>
+          <i class="fas fa-percent"></i>
+        </div>
+        <p>CSS</p>
+        <div class="css">
+          <div class="bg">
+            <div class="cssPercent" id="percents" data-width="85%"></div>
+          </div>
+          <div data-goal="85" class="increase"></div>
+          <i class="fas fa-percent"></i>
+        </div>
+        <p>Javascript</p>
+        <div class="js">
+          <div class="bg">
+            <div class="jsPercent" id="percents" data-width="70%"></div>
+          </div>
+          <div data-goal="70" class="increase"></div>
+          <i class="fas fa-percent"></i>
+        </div>
+        <p>WordPress</p>
+        <div class="WordPress">
+          <div class="bg">
+            <div class="WordPercent" id="percents" data-width="55%"></div>
+          </div>
+          <div data-goal="55" class="increase"></div>
+          <i class="fas fa-percent"></i>
+        </div>
+      </div>
+      <div class="mainCon">
+        <div class="animationContainer">
+          <div class="animate__animated animate__bounceInLeft element1">
+            <div class="cards cardsDown">
+              <img src="photos/webdevelop.png" />
+              <h1>Web Developing</h1>
+            </div>
+          </div>
+          <div class="animate__animated animate__bounceIn element2">
+            <div class="cards cardsDown">
+              <img src="photos/bullhorn.png" />
+              <h1>Digital Marketing</h1>
+            </div>
+          </div>
+          <div class="animate__animated animate__bounceInRight element3">
+            <div class="cards cardsDown">
+              <img src="photos/webdesign.png" />
+              <h1>Web<br />Designing</h1>
+            </div>
+          </div>
+        </div>
+        <div class="circle">
+          <span class="cir1"></span>
+          <span class="cir2"></span>
+          <span class="cir3"></span>
+        </div>
+      </div>
+    </section>
+    <!------------------- Contact Section ------------->
+    <section class="contact">
+      <h1 class="header">Contact Me</h1>
+      <h2 class="title">Here you can find ways to contact me</h2>
+      <div class="content">
+        <div class="messageMe">
+          <img src="photos/messageMe.png" alt="message Me">
+          <h1>Message Me</h1>
+          <div>
+            <span>
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="Email">
+            </span>
+            <textarea placeholder="message..." rows="2" cols="20"></textarea>
+            <input type="button" value="Send">
+          </div>
+        </div>
+        <div class="socialAcc">
+          <img src="photos/socialAcc.png" alt="social Accounts">
+          <h1>My social media accounts</h1>
+          <div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <h2>Yöusëf Bn Möhamëd</h2>
+            <a href="#"><img src="photos/go.png"></a>
+          </div>
+          <div>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <h2>@Yousef_Mo_18</h2>
+            <a href="#"><img src="photos/go.png"></a>
+          </div>
+          <div>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <h2>+201145119185</h2>
+            <a href="#"><img src="photos/go.png"></a>
+          </div>
+          <div>
+            <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+            <h2>Egypt, Assiut ,Elfath</h2>
+            <a href="#"><img src="photos/go.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="SocialIcons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="creator">
+          Created By <span><a class="cap" href="#"><span class="ell">El</span>Captain</a></span>
+          | </span> 2020 All rights reserved.
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

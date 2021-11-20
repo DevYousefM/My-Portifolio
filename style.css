@@ -1,0 +1,593 @@
+* {
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+*::selection {
+  background: #ffd25a;
+  color: #bb3d03;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  font-size: xx-large;
+  color: #bb3d03;
+  margin-top: 1.5rem;
+}
+.title {
+  color: #bb3d03;
+  font-size: x-large;
+  margin-top: 1.5rem;
+}
+/* <------- Scoll To Up Button ------------->  */
+.btnScroll {
+  font-weight: bold;
+  border: none;
+  font-size: x-large;
+  color: white;
+  padding: 6px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  width: 45px;
+  border-radius: 6px;
+}
+
+.btnScroll:hover {
+  border-radius: 40px;
+  transition: 0.7s;
+  transform: rotateZ(360deg);
+  box-shadow: 0 0 20px #000;
+  background-color: rgb(143, 143, 143);
+}
+/* <------- Loading Section -------------> */
+.loader_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader img {
+  width: 280px;
+}
+/* <------- NavBar Section ------------->  */
+.navBar {
+  background-color: #ffd25a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  right: 0;
+}
+.navBar .logoDiv {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 1.5rem;
+}
+.navBar .logoDiv mark {
+  font-size: xx-large;
+  line-height: 2px;
+  font-weight: bold;
+  background-color: #ff785a;
+  border-radius: 20%;
+  padding: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #191919;
+}
+.navBar .logoDiv h1 {
+  font-size: xx-large;
+  line-height: 2px;
+  font-weight: bold;
+  color: #bb3d03;
+}
+.navBar .sections ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin-right: 0.6rem;
+}
+.navBar .sections ul li {
+  font-size: x-large;
+  color: #bb3d03;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.7rem;
+}
+.navBar .sections ul li:hover {
+  border-bottom: 3px solid #bb3d03;
+  transition: 0.2s;
+  border-radius: 6px;
+  background-color: #ff785a;
+  color: #191919;
+}
+/* ---- Home ---- */
+.home {
+  margin-top: 5rem;
+  background-image: url(photos/banner.jpg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+}
+.home img {
+  width: 12rem;
+  border-radius: 50%;
+  border: 0.4rem solid #ff782e;
+  background-color: #ff782e;
+  transform: rotateZ(-25deg);
+}
+.home img:hover {
+  width: 11rem;
+  transition: 0.5s;
+  transform: rotateZ(-5deg);
+  cursor: pointer;
+}
+.home h1 {
+  color: #bb3d03;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.home .searchDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-right: 25px;
+}
+.home .searchDiv img {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: unset;
+  transform: rotateZ(-2deg);
+}
+.home .searchDiv input[type="search"] {
+  width: 450px;
+  border-radius: 30px;
+  height: 40px;
+  outline: none;
+  border: 5px solid #ff782e;
+  background-color: rgb(252, 224, 182);
+  padding: 18px;
+  font-size: x-large;
+  color: #ff785a;
+  text-align: center;
+}
+.home .searchDiv input[type="search"]:hover,
+.home .searchDiv input[type="search"]:focus {
+  width: 550px;
+  transition: 0.25s;
+}
+.home input[type="submit"] {
+  width: 100px;
+  background-color: rgb(252, 224, 182);
+  height: 40px;
+  border-radius: 20px;
+  border: 5px solid #ff782e;
+  color: #ff785a;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.home input[type="submit"]:hover {
+  background-color: #ff782e;
+  color: rgb(252, 224, 182);
+  transition: 0.5s;
+  cursor: pointer;
+}
+/* About Section */
+.about {
+  background-image: url(photos/cli.jpg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46rem;
+}
+.about img {
+  width: 11.5rem;
+  border-radius: 50%;
+  border: 0.4rem solid #ff782e;
+  background-color: #ff782e;
+  transform: rotateZ(24deg);
+}
+.about img:hover {
+  width: 13rem;
+  transition: 0.5s;
+  transform: rotateZ(40deg);
+  cursor: pointer;
+}
+.about .cardsDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.about .cardsDiv .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 7px solid #bb3d03;
+  border-radius: 20px;
+  width: 15rem;
+  height: 14rem;
+  line-height: 1.5rem;
+  box-sizing: content-box;
+  padding: 1rem;
+  margin: 0rem 0.7rem;
+}
+.about .cardsDiv .card:hover {
+  transform: scale(1.2);
+  transition: 0.7s;
+  box-shadow: 0 0 10px #000;
+}
+.about .cardsDiv .card i {
+  font-size: 2.5rem;
+  color: #bb3d03;
+}
+.about .cardsDiv .card h1 {
+  font-size: 2rem;
+  color: #bb3d03;
+  margin: 1.5rem 0rem;
+}
+.about .cardsDiv .card ul {
+  line-height: 2rem;
+  text-align: start;
+  margin-left: 2rem;
+}
+/* <------------ Skills Section ----------->  */
+.skills {
+  background-image: url(photos/banner.jpg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  height: 45rem;
+}
+.skills .skillsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  flex-wrap: wrap;
+  width: 85%;
+}
+.skills .skillsDiv p {
+  width: 100%;
+}
+.skills .skillsDiv .html,
+.skills .skillsDiv .css,
+.skills .skillsDiv .js,
+.skills .skillsDiv .WordPress {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 10px;
+}
+.fa-percent {
+  font-size: 12px;
+}
+.bg {
+  background-color: rgb(197, 196, 196);
+  height: 0.5rem;
+  width: 90%;
+  margin-right: 0.5rem;
+}
+.skills .skillsDiv p {
+  margin-top: 1rem;
+}
+.skills .skillsDiv .html .htmlPercent,
+.skills .skillsDiv .css .cssPercent,
+.skills .skillsDiv .js .jsPercent,
+.skills .skillsDiv .WordPress .WordPercent {
+  height: 100%;
+  background-color: #bb3d03;
+  transition-duration: 0.5s;
+}
+.skills .skillsDiv .html .htmlPercent {
+  width: 90%;
+}
+.skills .skillsDiv .css .cssPercent {
+  width: 85%;
+}
+.skills .skillsDiv .js .jsPercent {
+  width: 70%;
+}
+.skills .skillsDiv .WordPress .WordPercent {
+  width: 55%;
+}
+.cardsDown {
+  margin: -17px 19px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 7px solid #bb3d03;
+  border-radius: 20px;
+  padding: 20px;
+  width: 209px;
+}
+.cards:hover {
+  transform: scale(1.2);
+  transition: 0.7s;
+  box-shadow: 0 0 10px #000;
+}
+.cards h1 {
+  text-align: center;
+  color: #bb3d03;
+}
+.cards img {
+  width: 3rem;
+  margin-bottom: 1rem;
+}
+.skills .mainCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.skills .mainCon .animationContainer .element1 {
+  display: none;
+  animation-duration: 1.5s;
+}
+.skills .mainCon .animationContainer .element2 {
+  display: block;
+  animation-duration: 1.5s;
+}
+.skills .mainCon .animationContainer .element3 {
+  display: none;
+  animation-duration: 1.2s;
+}
+.skills .mainCon .animationContainer {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cir1,
+.cir2,
+.cir3 {
+  width: 20px;
+  height: 20px;
+  border: 3px #bb3d03 solid;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.cir1 {
+  background-color: rgba(255, 255, 255, 0);
+}
+.cir2 {
+  background-color: #bb3d03;
+}
+.cir3 {
+  background-color: rgba(255, 255, 255, 0);
+}
+.cir1,
+.cir2,
+.cir3 {
+  cursor: pointer;
+}
+/*  Contact Section  */
+.contact {
+  background-image: url(photos/cli.jpg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  height: 42rem;
+}
+.contact .content {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.contact .content .messageMe,
+.contact .content .socialAcc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.contact .content h1 {
+  font-size: 1.5rem;
+  color: #bb3d03;
+  margin: 1rem 1rem 0rem 1rem;
+}
+.contact .content .messageMe img,
+.contact .content .socialAcc img {
+  width: 6rem;
+}
+.contact .content .socialAcc div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 62%;
+  margin-top: 1.5rem;
+}
+.contact .content .socialAcc div i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  color: black;
+}
+.contact .content .socialAcc div h2 {
+  font-size: 1.4rem;
+  color: #bb3d03;
+}
+.contact .content .socialAcc div img {
+  width: 1.5rem;
+  margin-left: 0.5rem;
+  transform: rotateZ(90deg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.contact .content .socialAcc div img:hover {
+  transform: rotateZ(450deg);
+}
+.contact .content .messageMe img {
+  transform: scale(1.2);
+}
+.contact .content .messageMe div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.contact .content .messageMe div span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.contact .content .messageMe div span input {
+  width: 12rem;
+  border: 5px solid #ff785a;
+  padding: 8px;
+  border-radius: 23px;
+  background-color: rgb(252, 224, 182);
+  text-align: center;
+}
+.contact .content .messageMe div span input:hover,
+.contact .content .messageMe div span input:focus {
+  width: 13rem;
+  transition: 0.5s;
+  border: 5px #000 solid;
+}
+.contact .content .messageMe div textarea {
+  width: 24rem;
+  height: 7rem;
+  resize: none;
+  border: 5px solid #ff785a;
+  margin-top: 1rem;
+  padding: 8px;
+  border-radius: 23px;
+  background-color: rgb(252, 224, 182);
+  text-align: center;
+}
+.contact .content .messageMe div input[type="button"] {
+  width: 7rem;
+  margin-top: 1rem;
+  color: #bb3d03;
+  font-weight: bold;
+  border: 5px solid #ff785a;
+  padding: 8px;
+  border-radius: 23px;
+  background-color: rgb(252, 224, 182);
+  text-align: center;
+  cursor: pointer;
+}
+.contact .content .messageMe div input[type="button"]:hover {
+  color: rgb(252, 224, 182);
+  background-color: #ff785a;
+}
+.contact .SocialIcons {
+  display: none;
+}
+.contact .SocialIcons a {
+  color: #bb3d03;
+}
+.contact .SocialIcons i {
+  font-size: x-large;
+  margin: 0.3rem;
+}
+/* ---------------- footer ----------------- */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffd25a;
+  padding: 20px;
+}
+.ell {
+  color: #191919;
+  font-weight: bold;
+  background-color: #ff785a;
+  padding: 6px;
+  border-radius: 6px;
+}
+.cap {
+  text-decoration: none;
+  color: #bb3d03;
+  font-weight: bold;
+}
